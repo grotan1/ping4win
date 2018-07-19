@@ -1,0 +1,518 @@
+object Main: TMain
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Ping4Win v2.2'
+  ClientHeight = 656
+  ClientWidth = 515
+  Color = clBtnFace
+  DoubleBuffered = True
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object sLabel1: TLabel
+    Left = 8
+    Top = 11
+    Width = 46
+    Height = 13
+    Caption = 'Host / IP:'
+  end
+  object sLabel2: TLabel
+    Left = 8
+    Top = 65
+    Width = 42
+    Height = 13
+    Caption = 'Interval:'
+  end
+  object sLabel3: TLabel
+    Left = 118
+    Top = 65
+    Width = 62
+    Height = 13
+    Caption = '(0 = Infinite)'
+  end
+  object sLabel10: TLabel
+    Left = 8
+    Top = 91
+    Width = 55
+    Height = 13
+    Caption = 'Log all over'
+  end
+  object sLabel11: TLabel
+    Left = 118
+    Top = 91
+    Width = 78
+    Height = 13
+    Caption = 'ms (0 = Disable)'
+  end
+  object sLabel4: TLabel
+    Left = 8
+    Top = 119
+    Width = 52
+    Height = 13
+    Caption = 'Status log:'
+  end
+  object sLabel5: TLabel
+    Left = 8
+    Top = 374
+    Width = 60
+    Height = 13
+    Caption = 'Status log:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object OptionButton: TSpeedButton
+    Left = 480
+    Top = 46
+    Width = 32
+    Height = 32
+    Hint = 'Settings'
+    Glyph.Data = {
+      76060000424D7606000000000000360400002800000018000000180000000100
+      0800000000004002000000000000000000000001000000010000FF00FF000066
+      0000754F2400755025007C592E007C5A30007E785C007F7E7C00835D3200A352
+      2800CA6E1800D7771200D4761600C677380082694D009E6A4E00826A5000997D
+      5C00AE7A4E00957F6500E5861600D2833E00DF993E009C846900E2914000EE9E
+      4000EAC078004E6ED4007999930000CCFF0097A39200AEA39300A7A7A600B3B2
+      AF00F6BB8000FCC08000DBCDBE00FED7AB00FED8AD00F4DBB600F4DCB700FEDA
+      B100FEDBB400FEDCB600F4DCB900F4DEBC00FEDDB900FEDFBC00FBE0BE00FEE0
+      BE0099FFFE00AAEEFF00DBCFC300DAD3CA00DBD5CE00DBD7D100FEE1C100FEE3
+      C400FEE4C600FAE5C900FEE5C900FBE7CE00FEE6CC00FBE8CF00FEE8CE00FEE9
+      D100FEEAD400FEECD700FBECD800FEEDD900FBEFDC00FEEEDD00FEF0DF00DBE0
+      E000F2EEE900FEF1E200FFF2E500FEF4E900FFF6ED00EDEFF000EDF0F000FEF8
+      F100FFFAF500FFFBF900FFFCF900FFFEFE000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000090909090909090909090909090909090909090909090909094E4E3D2C27
+      555530413D3D39392F2F2B2B2B2626252509095134050808134A55413D3D3939
+      302F2F2B2B262626250909510E0655551E135541403D3D3939302F2B2B262B25
+      2509095103494F55550827451616161616161616161616262609095103494950
+      550827454141413D3939302F2B2B2B26260909550E17494911053D454541413D
+      3D3930302F2B2B2B26090955350E03030E244B48454541403D393939302B2B2B
+      26090955514B2C2C55553D4B454545413D3D3939302F2B2B2B09095535050707
+      2055554B4B454541403D3D3939302F2B2B090955101C1D1D3320554B4B484545
+      413D3D3939302F2B2B090955031D01011D072C4E16161616161616161616162F
+      2F090955033201011D072C4E4B4B4B454541413D3D39302F2F0909551021551D
+      1F05454E4E4B4B484545413D3D3939302F090955371003031035514E4E4E4B4B
+      454541403D3D39393009091A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A1A
+      1A09090A0B0B0B0B0B0B0B0B0B0B0B0B0B2319142319121B0A09090D15151515
+      15151515151515151522180B23180F1B0D090009090909090909090909090909
+      0909090909090909090000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000}
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = OptionButtonClick
+  end
+  object sSpeedButton1: TSpeedButton
+    Left = 480
+    Top = 8
+    Width = 32
+    Height = 32
+    Hint = 'About'
+    Glyph.Data = {
+      76060000424D7606000000000000360400002800000018000000180000000100
+      08000000000040020000120B0000120B0000000100000000000000000000FFFF
+      FF00D3D2D500CBCACD00FF00FF00FFFEFF00F8F7F800E4E3E400D4D1D300EBE8
+      E900CAC7C800C5C0C100C2BDBE00DCD7D800D8D3D400CAC2C200BDB6B600CEC7
+      C700DBD5D500D3CFCF00FDFAFA00F4F1F100F7F5F500FFFEFE00F4F3F300BDB4
+      B300E0D9D800BFB4B200BFB2AF00C6BAB700FBF7F600F7F3F200D5C2BC00CFC2
+      BE00CBBEBA00D1BDB600C8B6B000E3D7D300DDD1CD00EBE2DF00EEE5E200FEFB
+      FA00DDCAC200F0DDD500F0DFD800F6EAE500FBF6F400EEE9E700CFA08A00D2AA
+      9800E8C9BB00E7C9BB00E4C7BA00DCC0B300E8CBBE00E1C5B800E5C9BC00E9CD
+      C100E3C8BC00EACFC300E9CEC200ECD3C800E9D0C500ECD4C900E8D1C700EDD7
+      CD00ECD8CF00F6E9E300F6EBE600F9F2EF00C95E2600CD622A00CE734400D177
+      4800D07E5400D0845D00DB926C00DA977400D6957400CF907000D0937400D195
+      7600DAA08200DCA28400DAA99000D4B09E00DFBAA800E6C7B800E8CBBD00E7CA
+      BC00E4C8BA00E8CDBF00E3C8BB00DCC3B700DDC4B800F3DACD00EBD2C600EAD1
+      C500EDDAD100F5E5DD00F9EDE700F5E9E300FBF5F200FAF4F100FEFAF800FDF9
+      F700FEFCFB00FAF8F700CA5F2600CB602700CC622800CA602800CB622900CA61
+      2A00CB622B00CB632C00CD652D00CC652E00CD672F00CB652E00CC673100CC67
+      3200CD683300CF6B3400CD693400D06E3600CD6A3500CE6C3700CF6D3900D070
+      3B00CF6F3C00D1733E00D2754000D1744000D3774200D2774500D1764600D47C
+      4900D37B4C00D5805300D5815500D0825900D7875D00D88B6200DA8F6400DC95
+      6E00DB956F00DC967100E1A38200E0A58600E4AD9000E5AE9100E9BA9F00E1B3
+      9A00F0D1C000F3DCCF00F5DFD300F1E0D700F7E9E100F4E7E000FCF5F100D377
+      3F00D3774000D47A4300D3784200D57C4400D47B4500D47B4600D57E4800D67F
+      4900D67F4A00D6804A00D8855000DA8F6100E6B39500EABFA400ECC4AB00F0D1
+      BF00EECFBD00F6EEE900FDF8F500FBF6F300D4783D00D8844B00D7834D00D986
+      4F00D9875200D9895200D8875100DA8B5500DB8C5600DF9A6B00E9B79400F2D5
+      C100FCF6F200F6F0EC00DA894F00DB8D5300DA8B5300DC8F5700DC905900DD91
+      5B00DC925D00DF966000E29F6E00E2A16F00E3A47400E3A77C00F0CFB600F4DB
+      C800F8EAE000DE955B00E19D6700E8B18500EFCBAD00F1D1B700F2D3B900F4DA
+      C400F4DBC700FAEDE200E29D6100E5A46800E3A26A00EAB98C00EDC5A200EFC9
+      A700F0CBA900F8E9DB00E7AD7400F1D0AE00F2D2B100F3D6B900F5DEC700F8E5
+      D300FDFBF900FEFDFC00F8F7F600EAB68000ECBD8B00EFC79D00F0CBA400F5DC
+      C100F7E2CB00F8E8D600FDFFFF00FBFEFF00F8FBFC00F8FAFB00F3F5F600F6FA
+      FE00F1F5F900EFF3F700EAEBEC00E6E9ED00EBEDF100DDDEE100040404040404
+      0404333338385C5A330404040404040404040404040404045940251A1213110F
+      22235D0404040404040404040404333E28FCFCFD070D0E02030C192437040404
+      0404040404574115F8FA27564E8D4B5131210A101C5D040404040404334206F6
+      18994970809897767448300A0C1B5E0404040404616BF5EC4D6D756C97010193
+      7176744F110B1D3404040433B3F4F4956F7A7C724CA0648C777C7A4750130F20
+      320404411701B275797C7C7C7A8B8A787C7C7C7A755502113A0433430129907B
+      807E7A73969B5F8B757C7C7C744A12082A33582E019CA6A485817F6FAF010192
+      467C7C7C7A7A35FF26333BEB01B0A5ABA78683769401019C886F7C7C7C7054FD
+      1A333F1701AFB7BAB8A9A784875F0101638F727C7C7052FE07333D1701E0C5C8
+      BDBCB8AAA2899A01016992727C6D53FB09333C6A01D7D3CBC9BEB9ACB8A3A4B0
+      05019E82786D99F92F33596601E3DED4D4CCCFCABBACA8A1B1010191707960F9
+      2833049F01EBDFDCD868EBC0C4BEBAB6980101946E8E16F76204043D1701E9DD
+      E20101DBCEC7C6BFD20129AD7DB2F41F5B0404042D0101E6E4DB0101C2D1DAC2
+      0101C1B6AEF4F42C0404040439B40117F0EDF30101010101EBC1C9C0EB01C359
+      04040404043FEA0117F1EEEFE7E8D9D6D5CDD00101B53C040404040404043F2E
+      0101B4F2E5F0E0E1DAB40101453B0404040404040404043944EB010101010101
+      0101146359040404040404040404040404609D44671E1E45652B3B0404040404
+      0404040404040404040404575936583358040404040404040404}
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = sSpeedButton1Click
+  end
+  object Label1: TLabel
+    Left = 118
+    Top = 39
+    Width = 86
+    Height = 13
+    Caption = 'ms between pings'
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 39
+    Width = 31
+    Height = 13
+    Caption = 'Delay:'
+  end
+  object PingIPEdit: TComboBox
+    Left = 66
+    Top = 8
+    Width = 205
+    Height = 21
+    Color = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 4473924
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    OnKeyPress = PingIPEditKeyPress
+  end
+  object PingIntervalEdit: TEdit
+    Left = 66
+    Top = 62
+    Width = 46
+    Height = 21
+    Color = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 4473924
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    NumbersOnly = True
+    ParentFont = False
+    TabOrder = 2
+    Text = '0'
+    OnKeyPress = PingIntervalEditKeyPress
+  end
+  object PingOverEdit: TEdit
+    Left = 66
+    Top = 89
+    Width = 46
+    Height = 21
+    Color = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 4473924
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    NumbersOnly = True
+    ParentFont = False
+    TabOrder = 3
+    Text = '0'
+    OnKeyPress = PingOverEditKeyPress
+  end
+  object LogFileName: TEdit
+    Left = 66
+    Top = 116
+    Width = 205
+    Height = 21
+    AutoSize = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    MaxLength = 255
+    ParentFont = False
+    TabOrder = 4
+    Text = 'Ping4Win.log'
+    OnKeyPress = LogFileNameKeyPress
+  end
+  object PingWriteLoggCheck: TCheckBox
+    Left = 66
+    Top = 143
+    Width = 87
+    Height = 19
+    Caption = 'Write to logfile'
+    TabOrder = 5
+    OnKeyPress = PingWriteLoggCheckKeyPress
+  end
+  object SendEdmailCheckBox: TCheckBox
+    Left = 295
+    Top = 143
+    Width = 101
+    Height = 17
+    Caption = 'Email log on stop'
+    TabOrder = 6
+    OnKeyPress = SendEdmailCheckBoxKeyPress
+  end
+  object PingStopBtn: TButton
+    Left = 89
+    Top = 168
+    Width = 75
+    Height = 25
+    Caption = 'Stop'
+    TabOrder = 8
+    OnClick = PingStopBtnClick
+    OnKeyPress = PingStopBtnKeyPress
+  end
+  object PingBtn: TButton
+    Left = 8
+    Top = 168
+    Width = 75
+    Height = 25
+    Caption = 'Ping'
+    TabOrder = 7
+    OnClick = PingBtnClick
+  end
+  object PingListBox: TListBox
+    Left = 0
+    Top = 202
+    Width = 515
+    Height = 166
+    TabStop = False
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BorderStyle = bsNone
+    Color = 16645629
+    DoubleBuffered = True
+    ExtendedSelect = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 4473924
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ItemHeight = 13
+    ParentDoubleBuffered = False
+    ParentFont = False
+    TabOrder = 9
+    OnMouseDown = PingListBoxMouseDown
+  end
+  object StatusListBox: TListBox
+    Left = 0
+    Top = 393
+    Width = 515
+    Height = 263
+    TabStop = False
+    Align = alBottom
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BorderStyle = bsNone
+    Color = 16645629
+    DoubleBuffered = True
+    ExtendedSelect = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 4473924
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ItemHeight = 13
+    ParentDoubleBuffered = False
+    ParentFont = False
+    TabOrder = 10
+    OnMouseDown = StatusListBoxMouseDown
+  end
+  object sPanel2: TPanel
+    Left = 288
+    Top = 8
+    Width = 186
+    Height = 89
+    TabOrder = 11
+    object sLabel6: TLabel
+      Left = 8
+      Top = 8
+      Width = 54
+      Height = 13
+      Caption = 'Max ping:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object sLabel7: TLabel
+      Left = 8
+      Top = 27
+      Width = 78
+      Height = 13
+      Caption = 'Average ping:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object sLabel8: TLabel
+      Left = 8
+      Top = 46
+      Width = 59
+      Height = 13
+      Caption = 'Time outs:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object sLabel9: TLabel
+      Left = 8
+      Top = 65
+      Width = 37
+      Height = 13
+      Caption = 'Errors:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object MaxPingLabel: TLabel
+      Left = 68
+      Top = 8
+      Width = 22
+      Height = 13
+      Caption = '0 ms'
+    end
+    object AveragePingLabel: TLabel
+      Left = 92
+      Top = 27
+      Width = 22
+      Height = 13
+      Caption = '0 ms'
+    end
+    object TimeOuTLabel: TLabel
+      Left = 73
+      Top = 46
+      Width = 6
+      Height = 13
+      Caption = '0'
+    end
+    object ErrorsLabel: TLabel
+      Left = 51
+      Top = 65
+      Width = 6
+      Height = 13
+      Caption = '0'
+    end
+  end
+  object DelayEdit: TEdit
+    Left = 66
+    Top = 35
+    Width = 46
+    Height = 21
+    NumbersOnly = True
+    TabOrder = 1
+    Text = '1000'
+    OnKeyPress = DelayEditKeyPress
+  end
+  object EmailonTimeoutCheck: TCheckBox
+    Left = 159
+    Top = 143
+    Width = 130
+    Height = 17
+    Caption = 'Email on host up/down'
+    TabOrder = 12
+  end
+  object Thread1: TBMDThread
+    UpdateEnabled = False
+    OnExecute = Thread1Execute
+    OnTerminate = Thread1Terminate
+    Left = 168
+    Top = 456
+  end
+  object IdMessage1: TIdMessage
+    AttachmentEncoding = 'UUE'
+    BccList = <>
+    CharSet = 'utf-8'
+    CCList = <>
+    ContentType = 'text/html'
+    Encoding = meDefault
+    FromList = <
+      item
+      end>
+    Recipients = <>
+    ReplyTo = <>
+    ConvertPreamble = True
+    Left = 288
+    Top = 528
+  end
+  object IdSMTP1: TIdSMTP
+    IOHandler = IdSSLIOHandlerSocketOpenSSL1
+    SASLMechanisms = <>
+    Left = 424
+    Top = 456
+  end
+  object IdSSLIOHandlerSocketOpenSSL1: TIdSSLIOHandlerSocketOpenSSL
+    Destination = ':25'
+    MaxLineAction = maException
+    Port = 25
+    DefaultPort = 0
+    SSLOptions.Mode = sslmUnassigned
+    SSLOptions.VerifyMode = []
+    SSLOptions.VerifyDepth = 0
+    Left = 288
+    Top = 456
+  end
+  object MailThread: TBMDThread
+    UpdateEnabled = False
+    OnExecute = MailThreadExecute
+    Left = 80
+    Top = 456
+  end
+end
