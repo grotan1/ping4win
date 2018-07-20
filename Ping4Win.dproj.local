@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.126,C:\Delphi\Ping4Win\grg.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.966,=C:\Users\grotan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.444,=C:\Users\grotan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.007,C:\Delphi\Ping4Win\grg.pas=C:\Delphi\Ping4Win\grg_lib.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.811,C:\Delphi\Ping4Win\Ping4Win.dproj=C:\Users\grotan\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.828,C:\Delphi\Ping4Win\grg_lib.pas=C:\Delphi\Ping4Win\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.708,C:\Delphi\Ping4Win\Help_p4w.dfm=C:\Delphi\Ping4Win\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.678,C:\Delphi\Ping4Win\Unit1.dfm=C:\Delphi\Ping4Win\Options_p4w.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.320,=C:\Delphi\Ping4Win\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.198,=C:\Delphi\Ping4Win\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.678,C:\Delphi\Ping4Win\Unit1.pas=C:\Delphi\Ping4Win\Options_p4w.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.416,=C:\Delphi\Ping4Win\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.897,C:\Delphi\Ping4Win\Main_p4w.pas=C:\Users\grotan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.897,C:\Delphi\Ping4Win\Main_p4w.dfm=C:\Users\grotan\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.708,C:\Delphi\Ping4Win\Help_p4w.pas=C:\Delphi\Ping4Win\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
