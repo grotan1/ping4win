@@ -3,7 +3,7 @@ object Main: TMain
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Ping4Win v2.2'
+  Caption = 'Ping4Win v2.3'
   ClientHeight = 656
   ClientWidth = 515
   Color = clBtnFace
